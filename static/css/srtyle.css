@@ -1,0 +1,591 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+header {
+  width: 100%;
+  height: 171px;
+  background-color: #fdeaea;
+  margin: 0 auto;
+}
+
+#category-filter {
+  font-size: 16px;
+  color: #333;
+  width: 157px;
+  height: 27px;
+  border-radius: 20px;
+  background-color: #ffd8d8;
+}
+
+header .header__container {
+  width: 1350px;
+  height: 171px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header__container .logo {
+  height: 204px;
+}
+
+header .header__container ul {
+  margin-top: 70px;
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header .header__container ul li {
+  margin-left: 34px;
+}
+
+header .header__container ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.banner img {
+  width: 100%;
+  height: 472px;
+  margin: 0 auto;
+}
+
+.container__text-company {
+  width: 1300px;
+  margin: 0 auto;
+  margin-top: 26px;
+}
+
+.container__text-company h3 {
+  font-size: 24px;
+  margin-bottom: 23px;
+}
+
+.container__text-company p {
+  font-size: 16px;
+}
+
+.container__staff {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+}
+
+.container__staff .staff-one img {
+  width: 170px;
+  height: 170px;
+}
+
+.container__staff .staff-one p {
+  text-align: center;
+}
+
+.container__staff .staff-two img {
+  width: 170px;
+  height: 170px;
+}
+
+.container__staff .staff-two p {
+  text-align: center;
+}
+
+.container__text-tasks {
+  width: 1300px;
+  margin: 0 auto;
+  margin-top: 26px;
+}
+
+.container__text-tasks h3 {
+  font-size: 24px;
+  margin-bottom: 23px;
+}
+
+.container__text-tasks p {
+  font-size: 16px;
+}
+
+.container__text-tasks .photo__tasks {
+  margin-left: 70px;
+  margin-top: 25px;
+}
+
+.container__about-souvenirs {
+  width: 1300px;
+  margin: 0 auto;
+  margin-top: 26px;
+}
+
+.container__about-souvenirs h3 {
+  font-size: 24px;
+  margin-bottom: 23px;
+}
+
+.container__about-souvenirs p {
+  font-size: 16px;
+}
+
+footer {
+  background-color: #fdeaea;
+  margin-top: 23px;
+  padding-top: 17px;
+}
+
+footer .container__footer {
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container__footer .about {
+  width: 250px;
+  text-align: center;
+}
+
+footer .container__footer .about ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+footer .container__footer .about ul li {
+  text-decoration: none;
+}
+
+footer .container__footer .information {
+  width: 250px;
+  text-align: center;
+}
+
+footer .container__footer .information ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+footer .container__footer .information ul li {
+  text-decoration: none;
+}
+
+footer .container__footer .telephone {
+  width: 230px;
+  text-align: center;
+}
+
+footer .container__footer .telephone ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+footer .container__footer .telephone ul li {
+  text-decoration: none;
+}
+
+.search__string {
+  margin-left: 49px;
+  margin: 29px;
+}
+
+.search__string .vvedit {
+  width: 500px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ffc8c8;
+  border: none;
+  cursor: pointer;
+}
+
+.search__string input {
+  width: 282px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ffc8c8;
+  border: none;
+}
+
+.title {
+  margin-left: 82px;
+  font-size: 24px;
+  margin-top: 25px;
+}
+
+.container__souvenirs {
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 52px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.container__souvenirs .souvenir {
+  text-align: center;
+}
+
+.container__souvenirs .souvenir img {
+  width: 237px;
+}
+
+.container__souvenirs .souvenir p {
+  font-weight: 600;
+}
+
+.information__kontakt {
+  margin-left: 82px;
+  padding: 40px;
+}
+
+.cpntainer__leader {
+  width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 56px;
+}
+
+.cpntainer__leader .leader__sales img {
+  width: 224px;
+}
+
+.buy-btn {
+  width: 157px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #ffc8c8;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 155px;
+}
+
+/* Стили для изображения товара */
+.product-image img {
+  width: 350px;
+  height: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Стили для блока с описанием товара */
+.product-description {
+  margin-right: 400px;
+}
+
+/* Стили для кнопки */
+.add-to-cart {
+  background-color: #f5acac;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.product-price {
+  font-size: 24px; /* Размер текста цены */
+}
+
+.select_css{
+  display: block; 
+  font-size: 16px; 
+  font-family: sans-serif; 
+  font-weight: 700; 
+  color: #444; 
+  line-height: 1; 
+  padding: .6em 1.4em .5em .8em; width: 100%; 
+  max-width: 30%; 
+  box-sizing: border-box; 
+  margin: 0; 
+  border: 1px solid #aaa;
+}
+
+.login-container-h1 {
+  height: 50px;
+  text-align: center;
+}
+
+/* Стили для контейнера логина */
+.login-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Стили для заголовка */
+.login-container-h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Стили для ссылки на регистрацию */
+.ifyou {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* Стили для кнопки входа */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #f5acac;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #fc8a8a;
+}
+
+/* Стили для ссылок */
+a {
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+/* стили для регистрации*/
+/* Стили для контейнера выхода */
+.logout-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Стили для заголовка выхода */
+.logout-container-h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Стили для текста подтверждения выхода */
+.logout-text {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* Стили для кнопки выхода */
+.logout-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* стили для страницы регшистрации*/
+/* Стили для контейнера регистрации */
+.signup-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Стили для заголовка регистрации */
+.signup-container-h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Стили для ссылки на вход */
+.already-have-account {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Стили для кнопки регистрации */
+.signup-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.signup-button:hover {
+  background-color: #218838;
+}
+
+/* Стили для ссылок */
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.cart-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-item {
+  border-bottom: 3px solid #ff8a8a;
+  padding: 20px 0;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.product-desc {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.product-price, .product-quantity {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.cart-container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.product-desc {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.product-price, .product-quantity {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+#checkout-button, .remove-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#checkout-button {
+  border-radius: 20px;
+  background-color: #ffb4b4;
+  color: white;
+  border: none;
+}
+
+.remove-button {
+  border-radius: 20px;
+  background-color: #fc6b6b;
+  color: white;
+  border: none;
+}
+
+#checkout-button:hover, .remove-button:hover {
+  opacity: 0.8;
+}
+

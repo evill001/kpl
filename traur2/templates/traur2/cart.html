@@ -1,0 +1,56 @@
+{% extends 'traur2/base.html' %}
+{% load static %}
+{% block content %}
+<div class="cart-container">
+    <h1>Корзина</h1>
+    <div id="cart-content" class="cart-content"></div> <br>
+    <button id="checkout-button">Оплатить</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var cartContent = document.getElementById('cart-content');
+        var checkoutButton = document.getElementById('checkout-button');
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var productName = urlParams.get('name');
+        var productDescription = urlParams.get('description');
+        var productPrice = urlParams.get('price');
+        var productQuantity = urlParams.get('quantity');
+
+        if (productName) {
+            var productHTML = '<div class="cart-item">';
+            productHTML += '<div class="product-info">';
+            productHTML += '<img src="{% static "img/shop1 4.png" %}" alt="Product Image" class="product-img">';
+            productHTML += '<div class="product-details">';
+            productHTML += '<h3 class="product-title">' + productName + '</h3>';
+            productHTML += '<p class="product-desc">' + productDescription + '</p>';
+            productHTML += '<p class="product-price">' + productPrice + '</p>';
+            productHTML += '<p class="product-quantity">' + productQuantity + '</p>';
+            productHTML += '</div>'; 
+            productHTML += '<button class="remove-button">Удалить</button>';
+            productHTML += '</div>';
+            productHTML += '</div>';
+
+            cartContent.innerHTML = productHTML;
+        } else {
+            cartContent.innerHTML = '<p>Корзина пуста</p>';
+        }
+
+        // Добавляем обработчик события для кнопки "Оплатить"
+        checkoutButton.addEventListener('click', function() {
+            // Ваш код для обработки оплаты товаров
+            alert('Оплата товаров');
+        });
+
+        // Добавляем обработчик события для кнопки "Удалить"
+        var removeButton = document.querySelector('.remove-button');
+        if (removeButton) {
+            removeButton.addEventListener('click', function() {
+                cartContent.innerHTML = '<p>Корзина пуста</p>';
+            });
+        }
+    });
+</script>
+
+{% endblock %}

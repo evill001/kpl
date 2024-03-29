@@ -1,0 +1,24 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> {{ title }} </title>
+    <link rel="stylesheet" href="{%static 'css/srtyle.css'%}"/>
+  </head>
+  <body>
+    <header>
+      <div class="header__container"><img class="logo" src="{% static 'img/lolgo.png'%}" alt=""/>
+        <ul>
+          <li> <a href="{% url 'home'%}">Главная</a></li>
+          <li> <a href="{% url 'suvenir'%}">Наши сувениры</a></li>
+          <li> <a href="{% url 'kontact'%}">Контакты</a></li>
+          <li> {% if user.is_authenticated %} <span>{{ user.username }}  </span> <a href="{% url 'account_logout'%}">/Выйти </a>
+               {% else %}<a href="{% url 'account_login'%}">Войти/</a>
+               <a href="{% url 'account_signup' %}">Регистрация</a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </header>
+    {%block content%}{%endblock%}

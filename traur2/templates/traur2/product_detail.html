@@ -1,0 +1,41 @@
+{% extends 'traur2/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="product-image">
+        <img src="{% static 'img/shop1 4.png'%}" alt="">
+    </div>
+    <div class="product-description">
+        <h2>Баба Яга Байкер</h2><br>
+        <p>Описание описание описание описание описание описание <br>
+            Описание описание описание описание описание описание <br>
+            Описание описание описание описание описание описание <br>
+            Описание описание описание описание описание описание <br>
+            Описание описание описание описание описание описание <br></p><br>
+        <p class="product-price"> Цена: 1400 p</p><br>
+        <select class="select_css">
+            <option class="vibr" value="">1 шт.</option>
+            <option class="vibr" value="">2 шт.</option>
+            <option class="vibr" value="">3 шт.</option>
+            <option class="vibr" value="">4 шт.</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCartAndRedirect()">Добавить в корзину</button>
+    </div>
+</div>
+
+<script>
+    function addToCartAndRedirect() {
+        var productName = document.querySelector('.product-description h2').innerText;
+        var productDescription = document.querySelector('.product-description p').innerText;
+        var productPrice = document.querySelector('.product-price').innerText;
+        var productQuantity = document.querySelector('.select_css').value;
+
+        window.location.href = '/cart/?name=' + encodeURIComponent(productName) + '&description=' + encodeURIComponent(productDescription) + '&price=' + encodeURIComponent(productPrice) + '&quantity=' + encodeURIComponent(productQuantity);
+    }
+</script>
+
+
+
+{% endblock %}

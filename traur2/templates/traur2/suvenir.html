@@ -1,0 +1,147 @@
+{% extends 'traur2/base.html' %}
+{% load static %}
+{% block content %}
+<div class="search__string">
+    <select id="category-filter">
+        <option value="all">Все категории</option>
+        <option value="category1">НОВИНКИ</option>
+        <option value="category2">ЛИДЕРЫ ПРОДАЖ</option>
+        <option value="category3">ЛУЧШИЕ ТОВАРЫ</option>
+    </select>
+    <input class="vvedit" type="text" id="name-filter" placeholder="Введите название товара">
+</div>
+<h2 class="title">Новинки каталога</h2>
+<div class="container__souvenirs">
+    <div class="souvenir" data-category="category1" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category1" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category1" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+</div>
+<h2 class="title">Лидер продаж</h2>
+<div class="container__souvenirs">
+    <div class="souvenir" data-category="category2" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category2" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байауууукер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category2" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category2" data-name="Баба Яга Байкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Байкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+</div>
+<h2 class="title">Лучшие товары</h2>
+<div class="container__souvenirs">
+    <div class="souvenir" data-category="category3" data-name="Бабt23t23t23t2"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Бабt23t23t23t2</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category3" data-name="Баба 44444айкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба 44444айкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category3" data-name="Баба 44444айкер"><img src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба 44444айкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+    <div class="souvenir" data-category="category3" data-name="Баба Яга Ба2435343434йкер"><img
+            src="{% static 'img/shop1 4.png'%}" alt="">
+        <p>Баба Яга Ба2435343434йкер</p>
+        <p>1400 p</p><br>
+        <a href="{% url 'product_detail' %}">
+            <button class="buy-btn">Купить</button>
+        </a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('category-filter').addEventListener('change', function() {
+        var selectedCategory = this.value;
+        var souvenirs = document.querySelectorAll('.souvenir');
+
+        souvenirs.forEach(function(souvenir) {
+            if (selectedCategory === 'all' || souvenir.getAttribute('data-category') === selectedCategory) {
+                souvenir.style.display = 'block';
+            } else {
+                souvenir.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<script>
+    document.getElementById('category-filter').addEventListener('change', filterSouvenirs);
+    document.getElementById('name-filter').addEventListener('input', filterSouvenirs);
+
+    function filterSouvenirs() {
+        var selectedCategory = document.getElementById('category-filter').value;
+        var nameFilter = document.getElementById('name-filter').value.toLowerCase();
+        var souvenirs = document.querySelectorAll('.souvenir');
+
+        souvenirs.forEach(function(souvenir) {
+            var category = souvenir.getAttribute('data-category');
+            var name = souvenir.getAttribute('data-name').toLowerCase();
+
+            var categoryMatch = selectedCategory === 'all' || category === selectedCategory;
+            var nameMatch = name.includes(nameFilter);
+
+            if (categoryMatch && nameMatch) {
+                souvenir.style.display = 'block';
+            } else {
+                souvenir.style.display = 'none';
+            }
+        });
+    }
+</script>
+{% endblock %}
